@@ -44,7 +44,7 @@ function AddProduct({ setOpenModal, token, updateProductList }) { // Receive the
     
             const data = await response.json();
     
-            if (response.ok && data.message === 'Create product successfully') {
+            if (response.ok && data.message === 'Created product successfully') {
                 setMessage('Data added successfully');
                 // Clear input fields
                 setName('');

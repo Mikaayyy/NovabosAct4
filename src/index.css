@@ -1,23 +1,48 @@
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(to left, rgb(97, 146, 146), rgb(66, 222, 196)); /* Gradient background */
+  animation: gradientAnimation 5s ease infinite; /* Animation effect */
+  background-blend-mode: overlay; /* Overlay blend mode */
+  background-image: url('https://wallpapers.com/images/hd/professional-background-0rvi0y9hjbs1yq1q.jpg'); /* Texture overlay */
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 .card {
-  width: calc(25% - 20px);
-  background-color: #f2f2f2;
+  width: calc(20% - 20px);
+  height: 350px;
+  background: linear-gradient(to left, rgb(131, 223, 254), rgba(132, 220, 244, 0.638)); /* Gradient background */
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
   margin: 10px;
   display: inline-block;
   text-align: center;
+  border-radius: 20px;
+}
+.cardOrder {
+  width: 400px;
+  height: 280px;
+  background: linear-gradient(to left, rgb(131, 223, 254), rgba(132, 220, 244, 0.638)); /* Gradient background */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
 }
 
 .card_image {
-  width: 80%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  height: 210px;
+  width: 50%;
+  border-radius: 100px;
+  height: 150px;
+  margin-top: 20px;
 }
 
 .card h3 {
@@ -33,7 +58,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
 }
 
 .bb {
@@ -55,8 +81,10 @@ body {
 }
 
 .wrapper h1 {
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
+  font-family: monospace;
+
 }
 
 .wrapper .input-box {
@@ -67,7 +95,7 @@ body {
 }
 
 .input-box input {
-  width: 92%;
+  width: calc(100%); /* Adjusted width to accommodate the icon */
   height: 100%;
   background: transparent;
   border: none;
@@ -76,42 +104,56 @@ body {
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
-  padding: 3px 10px 3px 20px;
+  padding: 3px 5px 3px 10px; /* Adjusted left padding to accommodate the icon */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 .input-box input::placeholder {
   color: #fff;
 }
 
-.input-box i {
+.input-box box-icon {
   position: absolute;
-  right: 20px;
+  left: 15px; /* Adjusted left position of the icon */
   top: 50%;
-  transform: translate(-50%);
+  transform: translateY(-50%);
   font-size: 20px;
 }
 
+
 .showpassword {
+  position: fixed;
   margin: 10px;
-  width: 20%;
-  height: 25px;
+  width: 6%;
+  height: 27px;
   background: rgba(255,255,255,0.5);
   outline: none;
-  border-radius: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 60px;
+  margin-left: -410px;
+  font-family: 'Trebuchet MS';
+  
 }
 
 .wrapper .btn {
-  width: 100%;
+  width: 98%;
   height: 45px;
-  background: #fff;
+  background:rgb(27, 160, 204);
   outline: none;
   border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 50px rgba(5, 10, 5, .10);
   cursor: pointer;
   font-size: 16px;
-  color: #333;
-  font-weight: 600;
-  margin-top: 50px;
+  color: black;
+  margin-top: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.wrapper .btn:hover{
+  background: rgba(30, 232, 243, 0.282);
 }
 
 .wrapper .register-link {
@@ -120,10 +162,15 @@ body {
   margin: 20px 0 15px;
 }
 
-.register-link p a {
-  color: #fff;
+.register-link a {
+  color: blue;
   text-decoration: none;
   font-weight: 600;
+
+}
+
+.register-link p{
+  color: black;
 }
 
 .register-link p a:hover {
@@ -146,13 +193,15 @@ body {
 }
 
 .App .openModalBtn {
-  width: 150px;
+  width: 180px;
   height: 40px;
   border: none;
   border-radius: 10px;
-  background-color: cornflowerblue;
-  color: white;
+  background-color: rgb(92, 178, 232);
+  color: black;
   cursor: pointer;
+  font-size: 20px;
+  font-family: cursive;
 }
 
 /*Modal CSS*/
@@ -200,16 +249,26 @@ footer {
 }
 
 button {
-  padding: 8px 20px;
+  width: 130px;
+  padding: 5px 20px;
+  padding-left: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
+  margin-top: 15px;
+  background-color: lightskyblue;
+  font-size: 15px;
+  font-family: fantasy;
+  text-align: center;
 }
 
 #cancelBtn {
   background-color: red;
-  color: white;
+  color: white; 
+  text-align: center;
   margin-right: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #cancelBtn:hover {
@@ -218,29 +277,36 @@ button {
 
 
 button:hover {
-  background-color: #150266;
+  background-color: #7665c59b;
 }
 
 .blueButton {
   background-color: blue;
   color: white;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* NAVBAR */
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: rgb(101, 220, 220);
   overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  margin-top: -40px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Change the color of links on hover */
@@ -252,5 +318,25 @@ button:hover {
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #0f68bc;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  font-weight: 100;
+  font-family: Algerian, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  color: white;
+  
+}
+
+.btnEdit,
+.btnDelete{
+  background-color: rgba(12, 89, 105, 0.725);
+  font-family: cursive;
+  font-style: oblique;
+  font-size: 15px;
+  border-radius: 20px;
+  width: 140px;
   color: white;
 }

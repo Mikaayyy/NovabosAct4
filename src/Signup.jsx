@@ -17,7 +17,7 @@ function Signup({ onClose }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3000/users/signup', {
+        fetch('http://localhost:3000/user/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -55,11 +55,11 @@ function Signup({ onClose }) {
                     <h1>SignUp</h1>
                     <div className="input-box">
                         <box-icon name='user'></box-icon>
-                        <input type="text" placeholder="Username" required value={username} onChange={handleUsernameChange} />
+                        <input type="text" className="inputUsername" placeholder="Username" required value={username} onChange={handleUsernameChange} />
                     </div>
                     <div className="input-box">
-                        <box-icon name='lock-alt' type='solid'></box-icon>
-                        <input type={showPassword ? 'text' : 'password'} placeholder="Password" required value={password} onChange={handlePasswordChange} />
+                        <box-icon name='name'></box-icon>
+                        <input type={showPassword ? 'text' : 'password'} className="inputPass"placeholder="Password" required value={password} onChange={handlePasswordChange} />
                         <button className='showpassword' type="button" onClick={togglePasswordVisibility}>
                             {showPassword ? 'Hide' : 'Show'}
                         </button>

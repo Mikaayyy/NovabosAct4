@@ -27,9 +27,9 @@ function Content({ token }) {
         return response.json();
     })
     .then(data => {
-        const updatedProducts = data.product.map(product => ({
+        const updatedProducts = data.products.map(product => ({
             ...product,
-            productImage: `http://localhost:3000/${product.productImage.replace("C:/Users/Jclop/Videos/SYSARCH/Midterm Project Practice/node-rest-shop/", "")}`
+            productImage: `http://localhost:3000/${product.productImage.replace("C:/Users/Ruffa Mae Mendoza/OneDrive\Desktop/SYSARCH GITHUB/node-rest-shop/", "")}`
         }));
         setProductList(updatedProducts);
     })

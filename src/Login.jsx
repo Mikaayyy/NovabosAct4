@@ -21,7 +21,7 @@ function Login({ onLogin }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3000/users/login', {
+        fetch('http://localhost:3000/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

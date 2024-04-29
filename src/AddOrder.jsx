@@ -40,7 +40,7 @@ function AddOrder({ setOpenModalOrder, token, updateOrderList }) {
             const data = await response.json();
 
             if (response.ok) {
-                if (data.message === 'Order stored!') {
+                if (data.message === 'Order stored') {
                     setMessage('Data added successfully');
                     // Clear input fields
                     setProductId('');

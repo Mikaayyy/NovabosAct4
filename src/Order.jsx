@@ -21,7 +21,7 @@ function Order(props) {
       };
 
     return (
-        <div className="card">
+        <div className="cardOrder">
             <h3>Order ID: {props.id}</h3>
             <h3>Product ID: {props.productId}</h3>
             <h3>Product Name: {props.productName}</h3>
